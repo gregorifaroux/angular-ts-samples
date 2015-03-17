@@ -1,0 +1,23 @@
+<article>
+
+<h1>Sample view</h1>
+
+    <section class="jumbotron">
+        <h2>Sample custom controller using custom service</h2>
+        <span class="alert-danger">Model says: {{ message }}</span>
+    </section>
+
+    <section class="jumbotron">
+        <h2>Sample custom filter</h2>
+        <ul>
+            <li ng-repeat="i in 5 | rangeto: 8">{{ i }}</li>
+        </ul>
+    </section>
+
+   <section class="jumbotron">
+    <h2>Sample custom directive</h2>
+    <my-directive name="Bob"></my-directive>
+  </section>
+
+</article>
+

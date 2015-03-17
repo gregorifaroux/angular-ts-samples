@@ -1,0 +1,11 @@
+src/controllers/*.js.map
+src/controllers/*.js
+src/directives/templates/*.html.js
+src/directives/templates/*.js.map
+src/*.js.map
+src/*.js
+types/**/*.js
+types/**/*.js.map
+lib
+.idea
+
