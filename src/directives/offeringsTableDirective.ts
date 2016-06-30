@@ -13,20 +13,27 @@ module app.directives {
 
     export class OfferingsTableDirective implements ng.IDirective {
 
-        public scope = {}; // :OfferingScope;
-        public restrict: string;
-        public replace: boolean;
+        public static $inject: string[] = ['$filter'];
 
         public templateUrl = "src/directives/templates/offeringsTableDirective.html";
 
-        constructor () {
+        public scope : OfferingScope;
+        public restrict: string;
+        public replace: boolean;
+
+        constructor ($filter: ng.IFilterService) {
             this.restrict = "E"; // Element
             this.replace = true;
+
 
             this.scope = <OfferingScope>{
                 offerings : "=offerings"
             };
 
+            // TODO:
+            //this.scope.offerings = $filter('orderBy')(this.scope.offerings, ["price"]);
+
+            return this;
         }
 
         public link: (scope: ng.IScope, element: ng.IAugmentedJQuery, attrs: ng.IAttributes) => void;
