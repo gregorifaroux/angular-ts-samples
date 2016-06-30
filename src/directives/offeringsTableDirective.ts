@@ -17,7 +17,9 @@ module app.directives {
 
         public templateUrl = "src/directives/templates/offeringsTableDirective.html";
 
-        public scope : OfferingScope;
+        public scope : {[key: string] : string}  = {
+          offerings: '='
+        };
         public restrict: string;
         public replace: boolean;
 
@@ -37,7 +39,7 @@ module app.directives {
         }
 
         public link: (scope: ng.IScope, element: ng.IAugmentedJQuery, attrs: ng.IAttributes) => void;
-        
+
     }
 }
 
