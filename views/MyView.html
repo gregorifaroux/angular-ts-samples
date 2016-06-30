@@ -2,6 +2,21 @@
 
 <h1>Sample view</h1>
 
+    <section id="marted-depth">
+
+        <div id="bids" style="width:49%; display:inline-block;">
+            <h1>Bids:</h1>
+            <offerings-table-directive offerings=[{"price":1},{"price":2},{"price":3}]></offerings-table-directive>
+        </div>
+
+        <div id="asks" style="width:49%; display:inline-block;">
+            <h1>Asks:</h1>
+            <offerings-table-directive offerings=[{"price":1},{"price":2},{"price":3}]></offerings-table-directive>
+        </div>
+
+
+    </section>
+
     <section class="jumbotron">
         <h2>Sample custom controller using custom service</h2>
         <span class="alert-danger">Model says: {{ message }}</span>

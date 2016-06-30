@@ -4,6 +4,7 @@
 /// <reference path="../src/controllers/MyController.ts" />
 /// <reference path="filters/filters.ts" />
 /// <reference path="../src/directives/myDirective.ts" />
+/// <reference path="../src/directives/offeringsTableDirective.ts" />
 
 /// <reference path="reference.ts" />
 
@@ -80,6 +81,9 @@ module app {
      */
     export function registerDirective (className: string, services = []) {
         var directive = className[0].toLowerCase() + className.slice(1);
+
+        console.log("directive = "  + directive)
+
         services.push(() => new app.directives[className]());
         angular.module('app.directives').directive(directive, services);
     }
