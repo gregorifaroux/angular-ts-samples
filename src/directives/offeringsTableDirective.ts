@@ -25,10 +25,10 @@ module app.directives {
             this.restrict = "E"; // Element
             this.replace = true;
 
-
-            this.scope = <OfferingScope>{
-                offerings : "=offerings"
-            };
+            // this.scope should be already populated.
+           // this.scope = <OfferingScope>{
+        //        offerings : "=offerings"
+         //   };
 
             // TODO:
             //this.scope.offerings = $filter('orderBy')(this.scope.offerings, ["price"]);
