@@ -20,10 +20,12 @@ module app.directives {
         public scope : OfferingScope;
         public restrict: string;
         public replace: boolean;
+        public $filter: ng.IFilterService;
 
         constructor ($filter: ng.IFilterService) {
             this.restrict = "E"; // Element
             this.replace = true;
+            this.$filter = $filter;
 
 
             this.scope = <OfferingScope>{
